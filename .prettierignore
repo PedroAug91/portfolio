@@ -1,0 +1,6 @@
+**/.prettierrc
+**/tsconfig.json
+**/package*.json
+**/dist
+**/db.d.ts
+**/migrations
