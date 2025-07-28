@@ -5,9 +5,9 @@ import { MenuIcon, CloseIcon } from "./Icons";
 function ResponsiveMenu() {
     return (
         <div className='absolute top-16 left-0 w-full bg-white flex flex-col items-start px-4 py-4 gap-4 shadow-md md:hidden z-50'>
-            <Anchor url='#about' text='About me' />
-            <Anchor url='#projects' text='Projects' />
-            <Anchor url='#contact' text='Contact' />
+            <Anchor url='#about' text='Sobre mim' />
+            <Anchor url='#projects' text='Projetos' />
+            <Anchor url='#contact' text='Contato' />
         </div>
     );
 }
@@ -26,9 +26,9 @@ function Header() {
                 />
             </a>
             <nav className='hidden md:flex items-center gap-4'>
-                <Anchor url='#about' text='About me' />
-                <Anchor url='#projects' text='Projects' />
-                <Anchor url='#contact' text='Contact' />
+                <Anchor url='#about' text='Sobre mim' />
+                <Anchor url='#projects' text='Projetos' />
+                <Anchor url='#contact' text='Contato' />
             </nav>
 
             <div className='md:hidden cursor-pointer'>
