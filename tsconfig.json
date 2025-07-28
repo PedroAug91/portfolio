@@ -3,8 +3,8 @@
         "target": "ES2020",
         "module": "ESNext",
         "moduleResolution": "node",
-        "allowjs": true,
-        "checkjs": true,
+        "allowJs": true,
+        "checkJs": true,
 
         "outDir": "./dist",
         "rootDir": "./src",
