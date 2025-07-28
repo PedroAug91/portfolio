@@ -1,5 +1,12 @@
 {
     "tabWidth": 4,
-    "trailingComma": "es5",
-    "objectWrap": "collapse"
+    "trailingComma": "all",
+    "objectWrap": "collapse",
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": false,
+    "printWidth": 80,
+    "jsxSingleQuote": true,
+    "bracketSpacing": true
 }
+

@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header-section,
+section,
+.hero,
+footer {
+    max-width: 1240px;
+    margin-inline: auto;
+}
