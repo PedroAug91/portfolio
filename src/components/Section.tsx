@@ -5,11 +5,13 @@ interface SectionProps {
     children: ReactNode;
     className?: string;
     center?: boolean;
+    sectionId?: string;
 }
 
 function Section({
     heading,
     children,
+    sectionId = undefined,
     className = "",
     center = false,
 }: SectionProps) {
@@ -20,7 +22,7 @@ function Section({
     );
 
     return (
-        <section className='pt-10 md:py-26 px-4'>
+        <section className='py-10 md:py-26 px-4' id={sectionId}>
             {sectionHeading}
             <div className={className}>{children}</div>
         </section>

@@ -1,6 +1,6 @@
 function Card() {
     return (
-        <div className='max-w-lg mt-10 rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg text-white min-w-md'>
+        <div className='max-w-xs sm:max-w-lg mt-10 rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg text-white min-w-md'>
             <p className='mb-4 text-lg'>
                 Oi, meu nome é Pedro. Sou desenvolvedor de sistemas web. =)
             </p>
@@ -12,7 +12,7 @@ function Card() {
             <p className='mb-2 font-semibold'>
                 Tenho experiência com as seguintes tecnologias:
             </p>
-            <ul className='columns-3 text-sm list-disc list-inside gap-x-4'>
+            <ul className='columns-2 sm:columns-3 text-sm list-disc list-inside gap-x-4'>
                 <li>Python</li>
                 <li>JavaScript</li>
                 <li>TypeScript</li>

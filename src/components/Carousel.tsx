@@ -1,23 +1,26 @@
-import React, { useRef, type ReactElement } from "react";
+import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "./Icons";
 
+import type { ReactElement } from "react";
+
 interface CarouselProps {
-    children: ReactElement[];
+    children: ReactElement | ReactElement[];
 }
 
 function Carousel({ children }: CarouselProps) {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const scroll = (direction: "left" | "right") => {
-        if (scrollRef.current) {
-            const { scrollLeft, clientWidth } = scrollRef.current;
-            const scrollAmount =
-                direction === "left" ? -clientWidth : clientWidth;
-            scrollRef.current.scrollTo({
-                left: scrollLeft + scrollAmount,
-                behavior: "smooth",
-            });
-        }
+        if (!scrollRef.current) return;
+
+        const container = scrollRef.current;
+        const card = container.querySelector("div > *") as HTMLElement;
+
+        if (!card) return;
+
+        const scrollAmount = direction === "left" ? -200 : 200;
+
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     };
 
     return (
@@ -31,10 +34,10 @@ function Carousel({ children }: CarouselProps) {
 
             <div
                 ref={scrollRef}
-                className='flex overflow-x-auto scroll-smooth gap-4 px-10 py-4 no-scrollbar'
+                className='flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 px-10 py-4 no-scrollbar'
             >
                 {React.Children.map(children, (child) => (
-                    <div className='flex-shrink-0'>{child}</div>
+                    <div className='flex-shrink-0 snap-center'>{child}</div>
                 ))}
             </div>
 
