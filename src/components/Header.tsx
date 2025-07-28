@@ -18,7 +18,7 @@ function Header() {
     return (
         <header className='w-full px-4 py-4 flex justify-between md:justify-start items-center bg-white shadow-md fixed inset-x-0 top-0 gap-5 z-50'>
             <a href='#top'>
-                <img src='/favicon.svg' alt='Icon' width={42} height={42} />
+                <img src='/assets/icon.svg' alt='Icon' width={42} height={42} />
             </a>
             <nav className='hidden md:flex items-center gap-4'>
                 <Anchor url='#about' text='Sobre mim' />
