@@ -18,7 +18,7 @@ function Carousel({ children }: CarouselProps) {
 
         if (!card) return;
 
-        const scrollAmount = direction === "left" ? -200 : 200;
+        const scrollAmount = direction === "left" ? -400 : 400;
 
         container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     };
@@ -27,7 +27,7 @@ function Carousel({ children }: CarouselProps) {
         <div className='relative'>
             <button
                 onClick={() => scroll("left")}
-                className='absolute left-2 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100'
+                className='absolute left-2 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100 hover:cursor-pointer'
             >
                 <ChevronLeft />
             </button>
@@ -43,7 +43,7 @@ function Carousel({ children }: CarouselProps) {
 
             <button
                 onClick={() => scroll("right")}
-                className='absolute right-2 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100'
+                className='absolute right-2 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100 hover:cursor-pointer'
             >
                 <ChevronRight />
             </button>

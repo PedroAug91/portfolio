@@ -2,7 +2,10 @@ import { GithubIcon, LinkedInIcon, GmailIcon } from "./Icons";
 
 function Footer() {
     return (
-        <footer className='border-t border-t-neutral-200 py-9 px-3'>
+        <footer
+            className='border-t border-t-neutral-200 py-9 px-3'
+            id='contact'
+        >
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-col gap-2'>
                     <h1 className='text-2xl'>Contato</h1>
@@ -14,7 +17,7 @@ function Footer() {
                         className='text-sm text-black/75 flex gap-2'
                     >
                         <GithubIcon />
-                        <span>PedroAug91</span>
+                        <span className='hover:underline'>PedroAug91</span>
                     </a>
                     <a
                         target='_blank'
@@ -22,11 +25,13 @@ function Footer() {
                         className='text-sm text-black/75 flex gap-2'
                     >
                         <LinkedInIcon />
-                        <span>Pedro Augusto</span>
+                        <span className='hover:underline'>Pedro Augusto</span>
                     </a>
                     <span className='text-sm text-black/75 flex gap-2'>
                         <GmailIcon />
-                        <span>pedro.aug2808@gmail.com</span>
+                        <span className='hover:underline select-all'>
+                            pedro.aug2808@gmail.com
+                        </span>
                     </span>
                 </nav>
             </div>

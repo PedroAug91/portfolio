@@ -16,7 +16,7 @@ function CarouselCard({
     projectUrl,
 }: CarouselCardProps) {
     return (
-        <div className='rounded-xl shadow-lg px-6 py-4 max-w-lg text-center flex flex-col gap-2 bg-[#ffffff]'>
+        <div className='rounded-xl shadow-lg px-6 py-4 max-w-xs sm:max-w-lg text-center flex flex-col gap-2 bg-[#ffffff]'>
             <a
                 href={projectUrl || "#projects"}
                 target={projectUrl ? "_blank" : "_self"}
@@ -24,7 +24,7 @@ function CarouselCard({
                 <img
                     src={imgSrc}
                     alt={imgAlt}
-                    className='rounded-lg border border-stone-200'
+                    className='max-w-3xs md:max-w-md mx-auto rounded-lg border border-stone-200'
                 />
             </a>
             <h1 className='font-bold'>{heading}</h1>

@@ -1,6 +1,6 @@
 function Card() {
     return (
-        <div className='max-w-xs sm:max-w-lg mt-10 rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg text-white min-w-md'>
+        <div className='max-w-[] sm:max-w-lg mt-10 rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-lg text-white'>
             <p className='mb-4 text-lg'>
                 Oi, meu nome é Pedro. Sou desenvolvedor de sistemas web. =)
             </p>
