@@ -16,7 +16,7 @@ function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className='w-full px-4 py-4 flex justify-between md:justify-start items-center bg-white shadow-md fixed inset-x-0 top-0 gap-5'>
+        <header className='w-full px-4 py-4 flex justify-between md:justify-start items-center bg-white shadow-md fixed inset-x-0 top-0 gap-5 z-50'>
             <a href='#top'>
                 <img
                     src='/public/favicon.svg'

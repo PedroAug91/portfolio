@@ -6,7 +6,10 @@ interface HeroProps {
 
 function Hero({ children }: HeroProps) {
     return (
-        <div className='bg-[url(/assets/hero.png)] bg-cover bg-no-repeat pt-[74px] text-white' id="about">
+        <div
+            className='bg-[url(/assets/hero.png)] bg-cover bg-no-repeat pt-[74px] text-white'
+            id='about'
+        >
             {children}
         </div>
     );
