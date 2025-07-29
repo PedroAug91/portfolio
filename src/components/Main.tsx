@@ -14,7 +14,7 @@ function Main() {
                 >
                     <Card />
                     <img
-                        src='/assets/itsame.jpg'
+                        src='/assets/itsame.webp'
                         alt="It's a picture of me."
                         className='max-w-xs sm:max-w-md rounded-4xl lg:order-last order-first'
                     />
@@ -23,7 +23,7 @@ function Main() {
             <Section heading='Projetos que desenvolvi' sectionId='projects'>
                 <Carousel>
                     <CarouselCard
-                        imgSrc='/assets/cajusoftwares.png'
+                        imgSrc='/assets/cajusoftwares.webp'
                         imgAlt='Imagem de Website institucional'
                         heading='Caju Softwares'
                         technologies='React Router, Vite e TailwindCSS'
@@ -31,14 +31,14 @@ function Main() {
                         projectUrl='https://cajusoftwares.com.br'
                     />
                     <CarouselCard
-                        imgSrc='/assets/rnsus.png'
+                        imgSrc='/assets/rnsus.webp'
                         imgAlt='Imagem de sistema de gerenciamento de bens'
                         heading='RNSUS - DTIC/PMRN'
                         technologies='Python, Flask, Postgres e Docker'
                         description='Sistema de gerenciamento de inventário'
                     />
                     <CarouselCard
-                        imgSrc='/assets/todoflaskapp.png'
+                        imgSrc='/assets/todoflaskapp.webp'
                         imgAlt='Imagem de sistema de gerenciamento de tarefas'
                         heading='ToDo app'
                         technologies='Python, Flask, MySQL e Docker'
@@ -46,7 +46,7 @@ function Main() {
                         projectUrl='https://github.com/PedroAug91/todo-flaskapp'
                     />
                     <CarouselCard
-                        imgSrc='/assets/telepesquisaia.png'
+                        imgSrc='/assets/telepesquisaia.webp'
                         imgAlt='Imagem de sistema de gerenciamento de tarefas'
                         heading='ChatBot RAG'
                         technologies='ExpressJS, Langchain, React, ChromaDB, Docker'
