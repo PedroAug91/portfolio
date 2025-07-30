@@ -30,7 +30,6 @@ function Main() {
                 imageSide="right"
                 />
                 <ProjectCard 
-                projectUrl=""
                 imgSrc="/assets/rnsus.webp"
                 imgAlt="Imagem website de gerenciamento de inventário."
                 heading="RNSUS - DTIC/PMRN"

@@ -59,12 +59,17 @@ function ProjectCard({
     projectUrl,
     imageSide
 }: ProjectCardProps) {
-    const tags = technologies.map((t) => {
+
+    const tags = technologies.map((t, i) => {
         const bgColor = getColor(t)
-        return <li className={`${bgColor} text-white font-semibold py-1 px-4 rounded-full`} >{t}</li>
+        return <li key={i} className={`${bgColor} text-white font-semibold py-1 px-4 rounded-full`} >{t}</li>
     });
 
-    const img = <a href={projectUrl} target="_blank"><img className="max-w-xs md:max-w-lg rounded-sm" src={imgSrc} alt={imgAlt} /></a>
+    const img = (
+        <a href={projectUrl ?? "#projects"} target={projectUrl ? "_blank" : "_self"}>
+            <img className="max-w-xs md:max-w-lg rounded-sm border border-stone-200" src={imgSrc} alt={imgAlt} />
+        </a>
+    )
     const div = (
                 <div className="flex flex-col gap-4 justify-center sm:min-w-sm max-w-sm order-1 lg:order-none">
                     <h1 className="text-2xl font-semibold mx-auto">

@@ -7,7 +7,7 @@ interface HeroProps {
 function Hero({ children }: HeroProps) {
     return (
         <div
-            className='bg-[url(/assets/hero.webp)] bg-cover bg-no-repeat pt-[74px] text-white'
+            className='bg-[url(/assets/hero.png)] bg-cover bg-no-repeat pt-[74px] text-white'
             id='about'
         >
             {children}
