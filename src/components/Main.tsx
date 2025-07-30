@@ -54,7 +54,7 @@ function Main() {
                 heading="ChatBot RAG"
                 description="Chatbot para encontrar empresas utilizando embeddings, Rag e Vector Search"
                 technologies={["React", "NodeJs", "TailwindCSS", "Vite", "Docker", "ExpressJs"]}
-                imageSide="right"
+                imageSide="left"
                 />
             </Section>
         </main>
