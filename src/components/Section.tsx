@@ -15,16 +15,14 @@ function Section({
     className = "",
     center = false,
 }: SectionProps) {
-    const sectionHeading = (
-        <h1 className={`text-3xl mb-6 ${center ? "max-w-fit mx-auto" : ""}`}>
-            {heading}
-        </h1>
-    );
-
     return (
-        <section className='py-10 md:py-26 px-4' id={sectionId}>
-            {sectionHeading}
-            <div className={className}>{children}</div>
+        <section className={`py-10 md:py-26 px-4 flex flex-col ${center ? "items-center" : ""}`} id={sectionId}>
+            <h1 className={`text-3xl mb-6`}>
+                {heading}
+            </h1>
+            <div className={className}>
+                {children}
+            </div>
         </section>
     );
 }

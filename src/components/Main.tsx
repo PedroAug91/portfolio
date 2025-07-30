@@ -1,8 +1,7 @@
-import Card from "./Card";
-import CarouselCard from "./CarouselCard";
-import Carousel from "./Carousel";
 import Hero from "./Hero";
 import Section from "./Section";
+import AboutMeCard from "./AboutMeCard";
+import ProjectCard from "./ProjectCard";
 
 function Main() {
     return (
@@ -12,7 +11,7 @@ function Main() {
                     heading='Quem sou eu? 🤔'
                     className='flex flex-col gap-y-10 items-center lg:flex-row lg:justify-between'
                 >
-                    <Card />
+                    <AboutMeCard />
                     <img
                         src='/assets/itsame.webp'
                         alt="It's a picture of me."
@@ -20,40 +19,43 @@ function Main() {
                     />
                 </Section>
             </Hero>
-            <Section heading='Projetos que desenvolvi' sectionId='projects'>
-                <Carousel>
-                    <CarouselCard
-                        imgSrc='/assets/cajusoftwares.webp'
-                        imgAlt='Imagem de Website institucional'
-                        heading='Caju Softwares'
-                        technologies='React Router, Vite e TailwindCSS'
-                        description='Website institucional'
-                        projectUrl='https://cajusoftwares.com.br'
-                    />
-                    <CarouselCard
-                        imgSrc='/assets/rnsus.webp'
-                        imgAlt='Imagem de sistema de gerenciamento de bens'
-                        heading='RNSUS - DTIC/PMRN'
-                        technologies='Python, Flask, Postgres e Docker'
-                        description='Sistema de gerenciamento de inventário'
-                    />
-                    <CarouselCard
-                        imgSrc='/assets/todoflaskapp.webp'
-                        imgAlt='Imagem de sistema de gerenciamento de tarefas'
-                        heading='ToDo app'
-                        technologies='Python, Flask, MySQL e Docker'
-                        description='Sistema de gerenciamento de tarefas simples'
-                        projectUrl='https://github.com/PedroAug91/todo-flaskapp'
-                    />
-                    <CarouselCard
-                        imgSrc='/assets/telepesquisaia.webp'
-                        imgAlt='Imagem de sistema de gerenciamento de tarefas'
-                        heading='ChatBot RAG'
-                        technologies='ExpressJS, Langchain, React, ChromaDB, Docker'
-                        description='Chatbot para encontrar empresas utilizando busca vetorial'
-                        projectUrl='https://github.com/PedroAug91/telepesquisa-ia'
-                    />
-                </Carousel>
+            <Section heading='Projetos que desenvolvi' sectionId='projects' center={true} className="flex flex-col gap-4">
+                <ProjectCard 
+                projectUrl="https://cajusoftwares.com.br"
+                imgSrc="/assets/cajusoftwares.webp"
+                imgAlt="Imagem website institucional."
+                heading="Caju Softwares"
+                description="Website institucional para a empresa de desenvolvimento de sistemas Caju Softwares."
+                technologies={["NodeJs", "React Router", "Vite", "TailwindCSS"]}
+                imageSide="right"
+                />
+                <ProjectCard 
+                projectUrl=""
+                imgSrc="/assets/rnsus.webp"
+                imgAlt="Imagem website de gerenciamento de inventário."
+                heading="RNSUS - DTIC/PMRN"
+                description="Sistema de gerenciamento de inventário de bens doados pelo RN Sustentável para a PMRN."
+                technologies={["Python", "Flask", "Docker", "PostgreSQL"]}
+                imageSide="left"
+                />
+                <ProjectCard 
+                projectUrl="https://github.com/PedroAug91/todo-flaskapp"
+                imgSrc="/assets/todoflaskapp.webp"
+                imgAlt="Imagem website de gerenciamento de tarefas."
+                heading="ToDo app"
+                description="Sistema de gerenciamento de tarefas simples."
+                technologies={["Python", "Flask", "MySQL"]}
+                imageSide="right"
+                />
+                <ProjectCard 
+                projectUrl=""
+                imgSrc="/assets/telepesquisaia.webp"
+                imgAlt="Imagem website institucional."
+                heading="ChatBot RAG"
+                description="Chatbot para encontrar empresas utilizando embeddings, Rag e Vector Search"
+                technologies={["React", "NodeJs", "TailwindCSS", "Vite", "Docker", "ExpressJs"]}
+                imageSide="right"
+                />
             </Section>
         </main>
     );
