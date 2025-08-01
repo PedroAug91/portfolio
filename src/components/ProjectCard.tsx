@@ -1,4 +1,5 @@
-type Technologies = "Python"
+type Technologies =
+    | "Python"
     | "JavaScript"
     | "TypeScript"
     | "PHP"
@@ -14,7 +15,8 @@ type Technologies = "Python"
     | "Docker"
     | "PostgreSQL"
     | "MySQL"
-    | "Vite"
+    | "Jinja"
+    | "Vite";
 
 interface ProjectCardProps {
     imgSrc: string;
@@ -22,7 +24,7 @@ interface ProjectCardProps {
     heading: string;
     description: string;
     technologies: Technologies[];
-    imageSide: "right" | "left"
+    imageSide: "right" | "left";
     projectUrl?: string;
 }
 
@@ -45,7 +47,8 @@ function getColor(technology: Technologies) {
         PostgreSQL: "bg-blue-700",
         MySQL: "bg-blue-600",
         Vite: "bg-orange-400",
-    }
+        Jinja: "bg-stone-800",
+    };
 
     return technologies[technology];
 }
@@ -57,52 +60,59 @@ function ProjectCard({
     description,
     technologies,
     projectUrl,
-    imageSide
+    imageSide,
 }: ProjectCardProps) {
-
     const tags = technologies.map((t, i) => {
-        const bgColor = getColor(t)
-        return <li key={i} className={`${bgColor} text-white font-semibold py-1 px-4 rounded-full`} >{t}</li>
+        const bgColor = getColor(t);
+        return (
+            <li
+                key={i}
+                className={`${bgColor} text-white font-semibold py-1 px-4 rounded-full`}
+            >
+                {t}
+            </li>
+        );
     });
 
     const img = (
-        <a href={projectUrl ?? "#projects"} target={projectUrl ? "_blank" : "_self"}>
-            <img className="max-w-xs md:max-w-lg rounded-sm border border-stone-200" src={imgSrc} alt={imgAlt} />
+        <a
+            href={projectUrl ?? "#projects"}
+            target={projectUrl ? "_blank" : "_self"}
+        >
+            <img
+                className='max-w-xs md:max-w-lg rounded-sm border border-stone-200 dark:border-none'
+                src={imgSrc}
+                alt={imgAlt}
+            />
         </a>
-    )
+    );
     const div = (
-                <div className="flex flex-col gap-4 justify-center sm:min-w-sm max-w-sm order-1 lg:order-none">
-                    <h1 className="text-2xl font-semibold mx-auto">
-                        {heading}
-                    </h1>
-                    <p className="text-wrap text-center">
-                        {description}
-                    </p>
-                    <ul className="flex gap-1 flex-wrap justify-center">
-                        {tags}
-                    </ul>
-                </div>
-    )
+        <div className='flex flex-col gap-4 justify-center sm:min-w-sm max-w-sm order-1 lg:order-none'>
+            <h1 className='text-2xl font-semibold mx-auto'>{heading}</h1>
+            <p className='text-wrap text-center'>{description}</p>
+            <ul className='flex gap-1 flex-wrap justify-center'>{tags}</ul>
+        </div>
+    );
 
     let content;
     if (imageSide === "left") {
         content = (
             <>
-            {img}
-            {div}
+                {img}
+                {div}
             </>
-        )
+        );
     } else {
         content = (
             <>
-            {div}
-            {img}
+                {div}
+                {img}
             </>
-        )
+        );
     }
 
     return (
-        <div className='bg-white shadow-md rounded-2xl py-3 px-3 flex flex-col items-center lg:flex-row lg:justify-between gap-4 max-w-fit'>
+        <div className='bg-white dark:bg-slate-700 dark:text-white shadow-md rounded-2xl py-3 px-3 flex flex-col items-center lg:flex-row lg:justify-between gap-4 max-w-fit'>
             {content}
         </div>
     );
